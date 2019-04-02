@@ -36,7 +36,7 @@ if (isset($_POST['maurice'])) {
 
         include "frmInscription.php";
     } else {
-        $sql = "SELECT COUNT(*) FROM t_users WHERE USEMAIL='". $mail . "'";
+        $sql = "SELECT COUNT(*) FROM T_USERS WHERE USEMAIL='". $mail . "'";
         $nombreOccurences = $pdo->query($sql)->fetchColumn();
 
         if ($nombreOccurences == 0) {
